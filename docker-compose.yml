@@ -1,0 +1,16 @@
+﻿services:
+  filelister:
+    build:
+      context: .
+      dockerfile: FileLister/Dockerfile
+      args:
+        - TITLE_SUFFIX=${TITLE_SUFFIX}
+    container_name: file-lister
+    environment:
+      TITLE_SUFFIX: ${TITLE_SUFFIX}
+      FILES_ROOT_DIRECTORY: ${FILES_ROOT_DIRECTORY}
+    volumes:
+      - ${FILES_ROOT_DIRECTORY}:/Files
+networks:
+  default:
+    name: file-lister

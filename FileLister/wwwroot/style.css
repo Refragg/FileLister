@@ -1,0 +1,46 @@
+.main {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.header-img {
+    max-height: 150px;
+    display: block;
+    margin: auto;
+}
+
+.navbar {
+    margin-top: 15px;
+    max-height: inherit;
+    display: grid;
+    justify-content: center;
+}
+
+.files {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.files-table {
+    width: 80%;
+    margin: auto;
+}
+
+.not-found {
+    justify-content: center;
+    display: grid;
+}
+
+h1 {
+    font-family: arial, sans-serif
+}

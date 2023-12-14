@@ -1,0 +1,32 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    background-color: #d0d0ff;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: large;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.table-header-entry {
+    width: 60%;
+}
+
+.table-header-size {
+    width: 15%;
+}
+
+.table-header-type {
+    width: 25%;
+}
