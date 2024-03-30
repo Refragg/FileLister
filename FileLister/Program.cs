@@ -1,5 +1,6 @@
 using System.Net;
 using System.Text;
+using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.FileProviders.Physical;
 
@@ -25,9 +26,13 @@ internal class Program
 
         app.UseStaticFiles(new StaticFileOptions { RequestPath = "/" + WebsiteResourcesRoot });
 
+        var contentTypeProvider = new FileExtensionContentTypeProvider();
+        contentTypeProvider.Mappings[".7z"] = "application/x-7z-compressed";
+
         app.UseStaticFiles(new StaticFileOptions
         {
             FileProvider = new PhysicalFileProvider(FilesRoot, ExclusionFilters.None),
+            ContentTypeProvider = contentTypeProvider,
             ServeUnknownFileTypes = true,
             RedirectToAppendTrailingSlash = true
         });
